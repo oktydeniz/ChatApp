@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Chat App</string>
+    <string name="notifications">Notifications</string>
+    <string name="user">User</string>
+    <string name="sing_in">Sing In</string>
+    <string name="new_here_sing_up">New Here ? Sing Up</string>
+    <string name="forgot_your_password">Forgot Your Password ?</string>
+    <string name="password">password</string>
+    <string name="e_mail">e-mail</string>
+    <string name="welcome">Welcome</string>
+    <string name="null_message">It\'s can\'t be null</string>
+
+    <!--Sing Up-->
+    <string name="user_name">user name</string>
+    <string name="send">Send</string>
+    <string name="welcome_user">Welcome  %1$s </string>
+    <string name="by_creating_an_account_you_agree_terms_of_use_and_privacy_policy">By creating an account, you agree <u>Terms of Use</u> and <u>Privacy Policy</u></string>
+    <string name="sing_up">Sing Up</string>
+    <string name="i_am_already_a_member">I am already a member</string>
+    <string name="welcome_user_msg_edit">Welcome, please check your information\'s from profile screen</string>
+
+    <!-- Forgot Password -->
+    <string name="check_the_email_address_associated_with_your_account">Check the email address associated with your account.</string>
+    <string name="if_you_did_not_receive_a_code_resend">If you did not receive a code! <u>Resend</u></string>
+    <string name="just_enter_the_email_address_you_ve_uset_to_register_with_us_and_we_ll_send_you_a_reset_link">Just enter the email address you have uset to register with us and we will send you a reset link!</string>
+    <string name="done">Done!</string>
+    <string name="check_info">Please check the information\'s</string>
+
+    <!-- Home Bottom Bar -->
+    <string name="notification_s">Notification\'s</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+
+    <!--Profile Fragment -->
+    <string name="edit">Edit</string>
+    <string name="user_profile">User Profile</string>
+    <string name="birthday">birthday</string>
+    <string name="education">education</string>
+    <string name="about_yourself">about yourself</string>
+    <string name="update">update</string>
+    <string name="sing_out">Sing out</string>
+    <string name="updated_data_success">Updated Successfully</string>
+
+    <!-- Users Profile Fragment-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all_followers">500 Followers</string>
+    <string name="all_friends">250 Friends</string>
+    <string name="send_friends_request">Send Friends Request</string>
+    <string name="send_message">Send Message</string>
+    <string name="send_follow_request">Send Follow Request</string>
+    <string name="cancel_the_request">Cancel the Request</string>
+    <string name="cancel">cancel</string>
+    <string name="accept">accept</string>
+    <string name="delete_friends">Delete from list </string>
+</resources>

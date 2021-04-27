@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_bar_menu"
+    app:startDestination="@id/bottom_home_fragment">
+
+    <fragment
+        android:id="@+id/bottom_home_fragment"
+        android:name="com.oktydeniz.chatapp.opening.opening.views.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_bottom_home_fragment_to_oneUserProfileFragment"
+            app:destination="@id/oneUserProfileFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottom_notifications_fragment"
+        android:name="com.oktydeniz.chatapp.opening.opening.views.home.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" >
+        <action
+            android:id="@+id/action_bottom_notifications_fragment_to_oneUserProfileFragment"
+            app:destination="@id/oneUserProfileFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottom_profile_fragment"
+        android:name="com.oktydeniz.chatapp.opening.opening.views.home.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/oneUserProfileFragment"
+        android:name="com.oktydeniz.chatapp.opening.opening.views.home.OneUserProfileFragment"
+        android:label="fragment_one_user_profile"
+        tools:layout="@layout/fragment_one_user_profile" >
+        <argument
+            android:name="user_id"
+            app:argType="string"
+            android:defaultValue="temp" />
+        <action
+            android:id="@+id/action_oneUserProfileFragment_to_messageFragment"
+            app:destination="@id/messageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="com.oktydeniz.chatapp.opening.opening.views.home.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" >
+        <argument
+            android:name="userId"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="userName"
+            app:argType="string"
+            android:defaultValue="null" />
+        <action
+            android:id="@+id/action_messageFragment_to_bottom_home_fragment"
+            app:destination="@id/bottom_home_fragment" />
+    </fragment>
+</navigation>

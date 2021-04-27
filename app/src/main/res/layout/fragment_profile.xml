@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.oktydeniz.chatapp.opening.opening.models.UserProfile" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/white_grey"
+        android:layout_height="match_parent"
+        tools:context=".opening.opening.views.home.ProfileFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_user_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:autofillHints="@string/app_name"
+                android:clickable="true"
+                android:contentDescription="@string/user_profile"
+                android:focusable="true"
+                android:padding="5dp"
+                app:loadImage="@{user.userImage}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:text="@string/user_name" />
+
+                <EditText
+                    android:id="@+id/profile_user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#000"
+                    android:layout_weight="3"
+                    android:autofillHints="@string/user_name"
+                    android:background="@drawable/edit_text_style"
+                    android:inputType="text"
+                    android:text="@{user.userName}"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:text="@string/birthday" />
+
+                <EditText
+                    android:id="@+id/profile_user_birthday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="3"
+                    android:textColor="#000"
+                    android:autofillHints="@string/user_name"
+                    android:background="@drawable/edit_text_style"
+                    android:inputType="text"
+                    android:text="@{user.userBirthday}"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:text="@string/education" />
+
+                <EditText
+                    android:id="@+id/profile_user_education"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="3"
+                    android:textColor="#000"
+                    android:autofillHints="@string/user_name"
+                    android:background="@drawable/edit_text_style"
+                    android:inputType="text"
+                    android:text="@{user.education}"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="@string/about_yourself" />
+
+                <EditText
+                    android:id="@+id/profile_user_about"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="3"
+                    android:autofillHints="@string/user_name"
+                    android:textColor="#000"
+                    android:background="@drawable/edit_text_style"
+                    android:inputType="textMultiLine"
+                    android:maxLength="250"
+                    android:text="@{user.aboutUser}"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/user_profile_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/update"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

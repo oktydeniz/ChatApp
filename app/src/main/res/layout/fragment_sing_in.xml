@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".opening.opening.views.auth.SingInFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:viewBindingIgnore="true"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:autofillHints="@string/app_name"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/app_icon" />
+
+        <EditText
+            android:id="@+id/user_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="50dp"
+            android:autofillHints="@string/e_mail"
+            android:background="@drawable/edit_text_style"
+            android:cursorVisible="true"
+            android:elegantTextHeight="true"
+            android:hint="@string/e_mail"
+            android:inputType="textEmailAddress"
+            android:padding="10sp" />
+
+        <EditText
+            android:id="@+id/user_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="50dp"
+            android:autofillHints="@string/app_name"
+            android:background="@drawable/edit_text_style"
+            android:cursorVisible="true"
+            android:elegantTextHeight="true"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10sp" />
+
+        <TextView
+            android:id="@+id/text_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/forgot_your_password"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sing_in_to_main_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:elevation="25dp"
+            android:paddingLeft="40dp"
+            android:textAllCaps="false"
+            android:paddingRight="40dp"
+            android:text="@string/sing_in"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_sing_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/new_here_sing_up"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.oktydeniz.chatapp.opening.opening.models.UserProfile" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_grey"
+        tools:context=".opening.opening.views.home.OneUserProfileFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_user_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:autofillHints="@string/app_name"
+                android:clickable="true"
+                android:contentDescription="@string/user_profile"
+                android:focusable="true"
+                android:padding="5dp"
+                app:loadImage="@{user.userImage}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:text="@string/user_name" />
+
+                <TextView
+                    android:id="@+id/profile_user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="3"
+                    android:textColor="#000"
+                    android:autofillHints="@string/user_name"
+                    android:background="@drawable/edit_text_style"
+                    android:text="@{user.userName}"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:textColor="#000"
+                    android:text="@string/birthday" />
+
+                <TextView
+                    android:id="@+id/profile_user_birthday"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#000"
+                    android:layout_weight="3"
+                    android:autofillHints="@string/user_name"
+                    android:background="@drawable/edit_text_style"
+                    android:text="@{user.userBirthday}"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:text="@string/education" />
+
+                <TextView
+                    android:id="@+id/profile_user_education"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#000"
+                    android:layout_weight="3"
+                    android:autofillHints="@string/user_name"
+                    android:background="@drawable/edit_text_style"
+                    android:text="@{user.education}"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#000"
+                    android:padding="5dp"
+                    android:text="@string/about_yourself" />
+
+                <TextView
+                    android:id="@+id/profile_user_about"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textColor="#000"
+                    android:layout_weight="3"
+                    android:autofillHints="@string/user_name"
+                    android:background="@drawable/edit_text_style"
+                    android:maxLength="250"
+                    android:text="@{user.aboutUser}"
+                    tools:ignore="LabelFor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                tools:ignore="UseCompoundDrawables">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:id="@+id/send_friends_request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:focusable="true"
+                        android:src="@drawable/add_friends" />
+
+                    <TextView
+                        android:id="@+id/friends_request_text"
+                        android:layout_width="wrap_content"
+                        android:textColor="#000"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/send_friends_request"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/start_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/send_msg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:layout_gravity="center"
+                        android:text="@string/send_message"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
